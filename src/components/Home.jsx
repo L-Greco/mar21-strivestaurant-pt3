@@ -44,8 +44,17 @@ class Home extends React.Component {
                                 COL CONTENT
                             </div>
                         */}
-            <h1>Welcome to Strivestaurant</h1>
-            <p>The best pasta dishes you can find on the web!</p>
+            {this.props.newTitle ? (
+              <h1> {this.props.newTitle} </h1>
+            ) : (
+              <h1>Welcome to Strivestaurant</h1>
+            )}
+
+            {this.props.newPayoff ? (
+              <p>{this.props.newPayoff}</p>
+            ) : (
+              <p>The best pasta dishes you can find on the web!</p>
+            )}
             <Carousel>
               {
                 // every time you do a .map in react you'll need to

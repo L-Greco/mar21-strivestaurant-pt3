@@ -80,11 +80,17 @@ class Home extends React.Component {
             </Col>
           </Row>
         )}
-        <Row className="justify-content-center mt-3">
-          <Col xs={12} md={8}>
-            <ReservationForm />
-          </Col>
-        </Row>
+        {this.state.selectedDish.comments.filter(
+          (comment) => comment.rating !== 5
+        ).length > 0 ? (
+          alert("This dish has rating lower than 5!")
+        ) : (
+          <Row className="justify-content-center mt-3">
+            <Col xs={12} md={8}>
+              <ReservationForm />
+            </Col>
+          </Row>
+        )}
       </Container>
     );
   }

@@ -73,11 +73,13 @@ class Home extends React.Component {
             </Carousel>
           </Col>
         </Row>
-        <Row className="justify-content-center mt-3">
-          <Col xs={12} md={8}>
-            <DishComments dish={this.state.selectedDish} marginTop={0} />
-          </Col>
-        </Row>
+        {this.state.selectedDish.name !== "Amatriciana" && (
+          <Row className="justify-content-center mt-3">
+            <Col xs={12} md={8}>
+              <DishComments dish={this.state.selectedDish} marginTop={0} />
+            </Col>
+          </Row>
+        )}
         <Row className="justify-content-center mt-3">
           <Col xs={12} md={8}>
             <ReservationForm />

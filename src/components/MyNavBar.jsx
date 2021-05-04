@@ -16,7 +16,9 @@ class MyNavBar extends Component {
     return (
       <Navbar bg="dark" variant="dark" expand="lg">
         <Navbar.Brand href="#home">
-          {this.props.title} - Strive For Food
+          {this.props.title === "Strivestaurant"
+            ? "The perfect place for pasta lovers"
+            : "Strive For Food"}
         </Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
